@@ -1,0 +1,234 @@
+
+\usepackage{graphics}               %figure insertion with \resizebox{\includegraphics{file.eps}
+\usepackage{graphicx}               %figure insertion with \includegraphics[width=x.cm]{file.eps}
+%\usepackage{subfigure}             %subfigures with \subfloat
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[intlimits]{amsmath}     %more maths options, e.g. {split} to align multi-line equations
+\usepackage{amssymb}                %more maths symbols e.g. hbar and plot symbols
+\usepackage{setspace}               %enables use of \doublespace \onehalfspace \singlespace
+\usepackage{fancyhdr}               %customises header and allows chapter, section or page number
+\usepackage{minitoc}                %chapter contents at start of chapters
+\usepackage{chapterbib}             %bibliography at end of chapters, you will need to run bibtex separately on each chapter file though
+\usepackage[british,UKenglish,english]{babel}  % For british english hyphenation patterns
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{wrapfig}
+
+\usepackage{soul}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+
+\usepackage{xfrac}
+\usepackage{bigints}
+\usepackage{mathabx}
+
+% *************** Some colour definitions ***************
+\usepackage{color}
+\definecolor{greenyellow}   {cmyk}{0.15, 0   , 0.69, 0   }
+\definecolor{yellow}        {cmyk}{0   , 0   , 1   , 0   }
+\definecolor{goldenrod}     {cmyk}{0   , 0.10, 0.84, 0   }
+\definecolor{dandelion}     {cmyk}{0   , 0.29, 0.84, 0   }
+\definecolor{apricot}       {cmyk}{0   , 0.32, 0.52, 0   }
+\definecolor{peach}         {cmyk}{0   , 0.50, 0.70, 0   }
+\definecolor{melon}         {cmyk}{0   , 0.46, 0.50, 0   }
+\definecolor{yelloworange}  {cmyk}{0   , 0.42, 1   , 0   }
+\definecolor{orange}        {cmyk}{0   , 0.61, 0.87, 0   }
+\definecolor{burntorange}   {cmyk}{0   , 0.51, 1   , 0   }
+\definecolor{bittersweet}   {cmyk}{0   , 0.75, 1   , 0.24}
+\definecolor{redorange}     {cmyk}{0   , 0.77, 0.87, 0   }
+\definecolor{mahogany}      {cmyk}{0   , 0.85, 0.87, 0.35}
+\definecolor{maroon}        {cmyk}{0   , 0.87, 0.68, 0.32}
+\definecolor{brickred}      {cmyk}{0   , 0.89, 0.94, 0.28}
+\definecolor{red}           {cmyk}{0   , 1   , 1   , 0   }
+\definecolor{orangered}     {cmyk}{0   , 1   , 0.50, 0   }
+\definecolor{rubinered}     {cmyk}{0   , 1   , 0.13, 0   }
+\definecolor{wildstrawberry}{cmyk}{0   , 0.96, 0.39, 0   }
+\definecolor{salmon}        {cmyk}{0   , 0.53, 0.38, 0   }
+\definecolor{carnationpink} {cmyk}{0   , 0.63, 0   , 0   }
+\definecolor{magenta}       {cmyk}{0   , 1   , 0   , 0   }
+\definecolor{violetred}     {cmyk}{0   , 0.81, 0   , 0   }
+\definecolor{rhodamine}     {cmyk}{0   , 0.82, 0   , 0   }
+\definecolor{mulberry}      {cmyk}{0.34, 0.90, 0   , 0.02}
+\definecolor{redviolet}     {cmyk}{0.07, 0.90, 0   , 0.34}
+\definecolor{fuchsia}       {cmyk}{0.47, 0.91, 0   , 0.08}
+\definecolor{lavender}      {cmyk}{0   , 0.48, 0   , 0   }
+\definecolor{thistle}       {cmyk}{0.12, 0.59, 0   , 0   }
+\definecolor{orchid}        {cmyk}{0.32, 0.64, 0   , 0   }
+\definecolor{darkorchid}    {cmyk}{0.40, 0.80, 0.20, 0   }
+\definecolor{purple}        {cmyk}{0.45, 0.86, 0   , 0   }
+\definecolor{plum}          {cmyk}{0.50, 1   , 0   , 0   }
+\definecolor{violet}        {cmyk}{0.79, 0.88, 0   , 0   }
+\definecolor{royalpurple}   {cmyk}{0.75, 0.90, 0   , 0   }
+\definecolor{blueviolet}    {cmyk}{0.86, 0.91, 0   , 0.04}
+\definecolor{periwinkle}    {cmyk}{0.57, 0.55, 0   , 0   }
+\definecolor{cadetblue}     {cmyk}{0.62, 0.57, 0.23, 0   }
+\definecolor{cornflowerblue}{cmyk}{0.65, 0.13, 0   , 0   }
+\definecolor{midnightblue}  {cmyk}{0.98, 0.13, 0   , 0.43}
+\definecolor{navyblue}      {cmyk}{0.94, 0.54, 0   , 0   }
+\definecolor{royalblue}     {cmyk}{1   , 0.50, 0   , 0   }
+\definecolor{blue}          {cmyk}{1   , 1   , 0   , 0   }
+\definecolor{cerulean}      {cmyk}{0.94, 0.11, 0   , 0   }
+\definecolor{cyan}          {cmyk}{1   , 0   , 0   , 0   }
+\definecolor{processblue}   {cmyk}{0.96, 0   , 0   , 0   }
+\definecolor{skyblue}       {cmyk}{0.62, 0   , 0.12, 0   }
+\definecolor{turquoise}     {cmyk}{0.85, 0   , 0.20, 0   }
+\definecolor{tealblue}      {cmyk}{0.86, 0   , 0.34, 0.02}
+\definecolor{aquamarine}    {cmyk}{0.82, 0   , 0.30, 0   }
+\definecolor{bluegreen}     {cmyk}{0.85, 0   , 0.33, 0   }
+\definecolor{emerald}       {cmyk}{1   , 0   , 0.50, 0   }
+\definecolor{junglegreen}   {cmyk}{0.99, 0   , 0.52, 0   }
+\definecolor{seagreen}      {cmyk}{0.69, 0   , 0.50, 0   }
+\definecolor{green}         {cmyk}{1   , 0   , 1   , 0   }
+\definecolor{forestgreen}   {cmyk}{0.91, 0   , 0.88, 0.12}
+\definecolor{pinegreen}     {cmyk}{0.92, 0   , 0.59, 0.25}
+\definecolor{limegreen}     {cmyk}{0.50, 0   , 1   , 0   }
+\definecolor{yellowgreen}   {cmyk}{0.44, 0   , 0.74, 0   }
+\definecolor{springgreen}   {cmyk}{0.26, 0   , 0.76, 0   }
+\definecolor{olivegreen}    {cmyk}{0.64, 0   , 0.95, 0.40}
+\definecolor{rawsienna}     {cmyk}{0   , 0.72, 1   , 0.45}
+\definecolor{sepia}         {cmyk}{0   , 0.83, 1   , 0.70}
+\definecolor{brown}         {cmyk}{0   , 0.81, 1   , 0.60}
+\definecolor{tan}           {cmyk}{0.14, 0.42, 0.56, 0   }
+\definecolor{gray}          {cmyk}{0   , 0   , 0   , 0.50}
+\definecolor{darkgray}          {cmyk}{0   , 0   , 0   , 0.90}
+\definecolor{black}         {cmyk}{0   , 0   , 0   , 1   }
+\definecolor{white}         {cmyk}{0   , 0   , 0   , 0   }
+
+% Use package hyperref
+\usepackage[plainpages=false,pdfpagelabels,bookmarksnumbered,
+        colorlinks=true, % true for colour
+        linkcolor=sepia,
+        citecolor=sepia,
+        filecolor=maroon,
+        %pagecolor=red,
+        urlcolor=sepia,
+        %pdftex,
+        breaklinks=true,
+        unicode]{hyperref}
+% For links that should not be broken use: \href{mailto:xport@tex.stackexchange.com}{\nolinkurl{xport@tex.stackexchange.com}}
+\pdfimageresolution=600
+\usepackage{thumbpdf}
+\usepackage{breakurl}
+
+%=======================DEFINE PAGE====================================================================================
+\topmargin      -1.8cm              %top of page margin
+\headheight     14.5pt              %running head height
+\parskip        2mm                 %paragraph spacing
+\oddsidemargin  12mm                %left margin of odd page =28mm +oddsidemargin
+\evensidemargin 1mm                 %left margin of even page =29mm +evensidemargin
+\textheight     250mm               %height of text box on page
+\textwidth      145mm               %width of text across the page =textwidth -5mm
+\parindent      8mm                 %paragraph indentation width
+\pagestyle{fancy}                   %define headers, Left/Right-Odd Page, Left/Right-Even Page
+    \fancyhead{}                    %Reset fancy fields
+    \fancyhead[LO]{S. Cooper}        %Other position is [RE]
+    \fancyhead[RO]{\rightmark}      %rightmark is the section name
+    \fancyhead[LE]{\leftmark}       %leftmark is the chapter name
+    \renewcommand{\headrulewidth}{0.5mm}
+        \headsep=   1.3cm           %Text separation from header
+%    \renewcommand{\footrulewidth}{0.5mm}
+    \cfoot{\thepage}
+        \footskip=  1.3cm           %Text separation from footer
+
+%===Redefine default figure placement================================================================================
+% This allows Latex to put the figure where you define it by default i.e. [h] ->here
+\makeatletter
+\def\fps@figure{htbp} %default is {tbp}
+\makeatother
+
+%==========================DEFINE PERSONALISED COMMANDS===============================================================
+%Instead of typing out commonly used long commands/items that are long you can define your own commands to use.
+%Notes: (1)\ensuremath is used in case you want to use the command while already in a math environment
+%e.g. $\theta =30\degr +45\degr$
+%(2) Latex wont put a space between this and the next word so I put it in manually and define another command name with
+%a s suffix when I specifically don't need a space e.g. at the end of a sentence. This can cause issues though as Latex
+% wont break the words joined by the tilde apart for line splitting.
+\newcommand{\sq}{\ensuremath{^2~}}
+\newcommand{\sqs}{\ensuremath{^2}}
+\newcommand{\cb}{\ensuremath{^3~}}
+\newcommand{\cbs}{\ensuremath{^3}}
+\newcommand{\x}{\ensuremath{\times}}
+\newcommand{\degr}{\ensuremath{^\circ}~}
+\newcommand{\degrs}{\ensuremath{^\circ}}
+\newcommand{\prox}{$\approx$}
+\newcommand{\degc}{$^{\circ}$C~}
+\newcommand{\degcs}{$^{\circ}$C}
+
+% DeclareMathSizes
+\DeclareMathSizes{10}{9}{8}{5}
+
+\usepackage[printonlyused,withpage]{acronym} 	% Acronym package
+\usepackage{longtable} 				% Use of long tables
+\usepackage{booktabs} 				% midrule toprule bottomrule etc. for tables
+
+% Load natbib
+\usepackage{natbib}                   %bibiography package
+\bibpunct{[}{]}{,}{n}{}{;}
+\renewcommand\bibname{References}     %Changes the Bibliography name to References instead
+
+% *************** Add reference to page number at which bibliography entry is cited ***************
+%\usepackage{citeref}
+%\renewcommand{\bibitempages}[1]{\newblock {\scriptsize [\mbox{cited at p.\ }#1]}}
+
+\newcommand{\figurerefname}{figure}
+\newcommand{\pagerefname}{page}
+\newcommand{\tablerefname}{table}
+\newcommand{\fref}[1]{\figurerefname~\ref{#1}}
+\newcommand{\pref}[1]{\pagerefname~\pageref{#1}}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\ast$}
+
+% New column type
+\newcolumntype{C}[1]{>{\centering}m{#1}}
+
+% *************** Load packages ***************
+\usepackage{epsfig}
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+%\usepackage[hyphens]{url}
+\usepackage[figuresright]{rotating}
+\usepackage{multirow}
+\usepackage{latexsym}
+\usepackage{lscape}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{footnote}
+
+% \usepackage{enumitem}
+% \setlist{itemsep=2pt,parsep=1pt,topsep=1pt}
+\usepackage{enumerate}
+
+\usepackage{upgreek}
+
+% Add here new theorems such as theorem, lemma, proposition, corollary
+\theoremstyle{plain}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{exmp}{Example}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem{note}{Note}
+
+% Placing figures - changes the margins around figures and figure placements
+\setcounter{topnumber}{2} 		% default 2
+\setcounter{bottomnumber}{2} 		% default 1
+\setcounter{totalnumber}{6} 		% default 3
+\renewcommand{\topfraction}{0.9} 	% default 0.7
+\renewcommand{\bottomfraction}{0.85}	% default?
+\renewcommand{\textfraction}{0.15}	% default 0.2
+\renewcommand{\floatpagefraction}{0.7}	% default 0.5
+
+\usepackage[section]{placeins}
+\usepackage{afterpage}
+\usepackage{float}
+
+\makesavenoteenv{tabular}
+\usepackage{perpage} 		%the perpage package
+\MakePerPage{footnote} 		%the perpage package command

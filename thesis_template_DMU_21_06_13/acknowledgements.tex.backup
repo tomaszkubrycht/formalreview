@@ -1,0 +1,32 @@
+\chapter*{Acknowledgements}
+\label{chap:acknowledgements}
+
+First of all I would like to thank my doctoral supervisor and my line manager Professor Bogumil Ulanicki for giving me the opportunity to perform this research, for his invaluable comments and the final check of the contents of my thesis, as well as for turning a blind eye when I was neglecting my other duties at work during the final months of my PhD study.
+
+Secondly, I would like to express my sincere gratitude to Professor Maciej Nowicki, thanks to whom and his scholarship fund I was given an opportunity to spend 12 months in two leading German universities. I used this time to broaden my research interests in the area of mathematical modelling what helped me a great deal in conducting research disseminated in this thesis.
+
+I wish to express my most sincere gratitude and appreciation to Prof. Robert Field from Oxford University, Prof. Ingmar Nopens from Ghent University and my fellow colleague, Dr. Shashi Paul from De Montfort University for kindly agreeing to review my thesis and for their thoughtful and detailed comments.
+
+Special thanks go to my beloved Marta for her encouragements, patience and fine cuisine.
+
+Most importantly, none of this would have been possible without the love and patience of my immediate family - my mum, dad, grandmother and my deceased grandfather, to whom I would like to express my heart-felt gratitude.
+
+I would also like to thank my fellow colleagues and friends, both past and present, from Water Software Systems - Parneet Paul, Anna ``Obokzośki'' Strzelecka, Żygomir Rzęzikupa Fakalach and Nayaranoloteph \"Ubergott, thanks to whom each and every day spent in the office was full of fun and banter. I have had a great time during my work here with all the silly jokes, pranks, inappropriateness and shenanigans of all sorts.
+
+I would like to acknowledge two following industrial collaborators whom I had the distinct pleasure of working with during the first year of my PhD study: Mr Steve Goodwin, the Managing Director of Aquabio Ltd. and Dr Alan Merry, the Technical Director of ITT Sanitaire. Without Steve's financial as well as technical involvement this project would not have been able to progress. Alan provided access to the ITT's invaluable experimental data and was kind to share his vast expert knowledge with me and my colleagues during numerous project meetings. Without the flux stepping experiment performed by Alan himself, calibration of the behavioural fouling model would not have been possible. 
+
+My words of deepest gratitude go to two modern day IT visionaries: Dr Richard Stallman, the founder of Free Software Foundation and Mr. Linus Torvalds, the initiator of GNU/Linux kernel. Although I know, the two of you have been in a long-lasting argument over the ethical and philosophical issues of software licenses and GNU/Linux coding standards, I hope you will not mind if I acknowledge both of you in the same place. If it wasn't for you guys I would not have been able to enjoy the freedom of free software, whichever license/copyright notice it is published under.
+
+Very special thanks also go to Donald Knuth and Leslie Lamport for giving us \TeX{} typesetting system and \LaTeX{} markup language. Without your developments, writing of this thesis would have taken much more time and, most probably, would have involved lots more frustration. 
+
+A big thank you goes to the creators of numerous film documents which I often watched to relax after long hours spent on this thesis. I would specifically like to acknowledge the following people: Peter Joseph, the creator of \emph{Zeitgest} movie series, John Pilger for his numerous insightful and extremely thought provoking documentaries, Adam Curtis the maker of \emph{The Century of the Self}, Charles Ferguson the director of \emph{The Inside Job}, Michael Moore for \emph{Capitalism the love story}, Sam Bozzo and Maude Barlow for making \emph{Blue Gold: World Water Wars} and numerous BBC reporters, writers and researchers behind so many educational and incredibly well made documents.
+
+I would also like to acknowledge all those anonymous software developers who participated in the developments of the following free and open source software packages: \textbf{GNU/Linux OS}, \TeX{}/\LaTeX{} editor \textbf{Kyle}, SVG graphics editor \textbf{Inkscape}, diagram creation program \textbf{Dia}, and the office suite \textbf{Libre Office}. Without all of you development of this thesis would surely have been significantly more difficult.
+
+I would like to sincerely thank all the authors of the publications which inspired the work described in this thesis, particularly (in alphabetical order): Tao Jiang, Chrysi Laspidou, Shuang Liang, Thomas Maere, Chase Duclos-Orsello, and Xiaodong Zhao. All new developments presented in this thesis are merely a continuation of your work and adaptation of your findings into a different field of science. 
+
+I would also like to thank all of my climbing buddies, friends from the Tower Climbing Centre in Leicester and the Climbing Station in Loughborough. I would like to thank Oliver Leger for hard but fun workouts and assistance in crushing numerous interesting boulder problems.
+
+Last but not least, special thanks go to my buddy Tomek Chomiuk for all the fun at indoor climbing walls and various crags across the UK and abroad, for open-source, for hundreds of hours spent on chatting and thousands of lines of text exchanged via email.
+
+In conclusion, I recognise that this research would not have been possible without the financial assistance of De Montfort University who paid my tuition fees and enabled me to work on my PhD during work hours.

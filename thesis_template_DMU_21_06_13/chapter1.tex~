@@ -1,0 +1,387 @@
+% Created:      	05 Jun 2012
+% Last modified: 	15 Aug 2012
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\chapter{First chapter}
+\label{chapter1}
+  \singlespace
+  \minitoc
+  \onehalfspace
+  \acresetall
+
+\section{Equations}
+\label{sec:chap1:introduction}
+
+\section{Citations and footnotes}
+\label{sec:chap1:introduction}
+
+\section{Lists}
+\label{sec:chap1:introduction}
+\subsection{Enumerate lists}
+\label{subsec:chap1:enumerate}
+
+\subsubsection{Arabic enumerators (default)}
+\begin{enumerate}
+\item First item.
+\item Second item. 
+\item Third item.
+\end{enumerate}
+
+\subsubsection{Roman enumerators}
+\begin{enumerate}[I]
+\item First item.
+\item Second item. 
+\item Third item.
+\end{enumerate}
+
+\subsection{Itemize lists}
+\label{subsec:chap1:itemize}
+
+% Four levels in the itemizate environment may be changed to suit specific needs
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\diamond$}
+\renewcommand{\labelitemiii}{$\ast$}
+\renewcommand{\labelitemiv}{$\cdot$}
+
+\begin{itemize}
+ \item First item.
+ \item Second item.
+ \item Third item.
+\end{itemize}
+
+\subsection{Description lists}
+\label{subsec:chap1:description}
+
+\begin{description}
+ \item[Physics] Physics is awesome.
+ \item[Geology] Geology is not science.
+ \item[Social Science] Social Science should not be called science.
+\end{description}
+
+\subsection{Nested lists}
+\label{subsec:chap1:nested_lists}
+
+\begin{itemize}
+\item First level, itemize first item.
+  \begin{itemize}
+   \item Second level, itemize, first item.
+   \item Second level, itemize, second item.
+    \begin{enumerate}
+     \item Third level, enumerate, first item.
+     \item Third level, enumerate, second item.
+    \end{enumerate}
+    \begin{itemize}
+    \item Third level, itemize, first item.
+    \item Third level, itemize, second item.
+    \end{itemize}
+  \item Second level, itemize, third item.
+  \end{itemize}
+\item First level, itemize, third item.
+\end{itemize}
+
+\subsubsection{Small alpha-characters within brackets}
+\begin{enumerate}[(a)]
+\item First item.
+\item Second item. 
+\item Third item.
+\end{enumerate}
+
+\section{Artwork}
+\label{sec:chap1:artwork}
+\subsection{Tables}
+\label{subsec:chap1:tables}
+\subsection{Figures}
+\label{subsec:chap1:figures}
+
+\section{Theorems \& Definitions}
+\label{sec:chap1:definitions}
+
+\section{New commands}
+\label{sec:chap1:new_commands}
+
+\section{Referencing}
+\label{sec:chap1:referencing}
+
+\citet{Lee2002,Busch2007,Saroj2008,Mannina2011,Maere2011}
+\citep{Lee2002}
+
+\section{Introduction}
+\label{sec:chap1:introduction}
+
+http://merkel.zoneo.net/Latex/natbib.php
+
+Work documented in this thesis represents a first step towards the development of a thoroughly calibrated and validated dynamic mathematical model of an \acf{iMBR} for wastewater treatment. Although the \ac{MBR} model created in this thesis and described in Chapter~\ref{chapter7} represents an immersed outside-in \ac{HF} system with air-sparging, backwashing and relaxation as cake control mechanisms, the fouling models developed and explained in Chapter~\ref{chapter6} are able to describe both immersed and side-stream configurations. It is thus possible to reconfigure the \ac{MBR} model presented here using different models developed in this thesis in order to represent other \ac{MBR} systems such as an immersed \ac{FS} system or various side-stream configurations with crossflow as a cake control mechanism. 
+
+Until now only a handful of \ac{MBR} models have been developed and described in scientific literature. These models are additionally found to provide a rather simplistic description of, either, activated sludge kinetics, membrane fouling, or both. They are also unable to represent the main synergic interactions that occur between various parts of a \ac{MBR} system, such link between \ac{SMP} and \ac{EPS} kinetics and fouling, links between bioreactor's operating conditions and \ac{SMP} rejection, etc. Whilst a multitude of modelling studies on selected subsystems of \ac{MBR} reactors have been performed and described in literature, it seems that adaptation and modification of these models and linking them together in order to create an integrated \ac{MBR} model capable of describing major synergic effects between activated sludge biocenosis and the membrane has either been a very challenging task or has not been a focus of the research teams working in this area.
+
+The \ac{MBR} models created up to date are either grey-box, i.e. part mechanistic part empirical and restricted to specific reactor configurations and field conditions or predominantly mechanistic but lacking the description of all components of the system and/or of functional interconnections between these components. Fully comprehensive, generic, mechanistic \ac{MBR} models ready for application in industrial projects are not yet available due to a highly complex nature of \ac{MBR} systems hosting processes which are not yet fully understood and thus very difficult to model. Therefore, modellers usually choose simpler, data-driven models which can be synthesised from the available pieces of information without the necessity of understanding all mechanistic principles governing the system.
+
+The first major component of a \ac{MBR} model is the model of the activated sludge bioreactor. Although several scientist proved that it was possible to predict some behaviour of a \ac{MBR} system using one of the standard \acs{IAWQ} \acfp{ASM} combined with a membrane filtration model \citep{Delrue2010}, such models are unable to calculate two important quantities characteristic of a \ac{MBR}, namely \acf{SMP} and \acf{EPS}. These two groups of organic substances are produced as by-products of microbial activity and are found to lead to membrane fouling, i.e. reduction of its permeability with time. They are also partially retained in the system by the membrane. Many researchers, e.g. \citep{Wakeman1991,Ye2006,Meng2007,Wang2009,Wu2012} found that \ac{SMP} is adsorbed inside membrane pores leading to reduction of pore diameters and thus increasing the membrane's resistance. 
+Although \ac{EPS} cannot penetrate into membrane pores alike \ac{SMP}, they bridge the gaps between flocs within the cake structure leading to an increase in the cake's \ac{SCR} and thus higher \acp{TMP}.
+
+In order to describe membrane fouling as a function of bulk liquid \ac{SMP} and \ac{EPS} concentrations, the implemented activated sludge model needs to be able to predict formation and degradation kinetics of these two main biofoulants. This task can be accomplished by development of a brand-new biological model or extension of the existing one, the latter being a preferred option. The new outputs of this extended biological model, i.e. mixed liquor \ac{SMP} and \ac{EPS} concentrations are then to be used as arguments in the equations of membrane fouling thus linking the biological model to the membrane fouling model. Development of the new \acp{ASM} with \ac{SMP} and \ac{EPS} as new state variables, creation of new fouling models and formulation of bi-lateral links between these two subsystems are the three main tasks that are carried out in this thesis. These three tasks are described in more detail later on in this chapter and in the subsequent chapters dedicated specifically to each individual task.
+
+Dynamic simulation has proved itself over the years to be an efficient and handy tool for analysis, optimisation, decision support, controller design and process design of many individual wastewater treatment processes as well as complete \acfp{WWTP}. Dynamic simulation has many advantages over traditional `static' design and analysis methods due to addition of time dimension which allows the user to assess system's behaviour under explicitly defined time-dependent inputs, parameters and disturbances. Although simulation methods with dynamic mathematical models are significantly more computationally demanding from solution of static, algebraic model equations, the computational power of modern personal computer is high enough to carry out complex and detailed simulation studies.  
+An ever increasing performance of personal computers allowed the development of several commercial \ac{WWTP} simulation packages which are now widely used by engineering consultants, plant operators, regulatory bodies and contracting firms. The software packages such as, in alphabetical order: \textbf{Asim} (Holinger AG), \textbf{Biowin} (EnviroSim Associates Ltd), \mbox{\textbf{GPS-X}} (Hydromantis Inc.), \textbf{SassPro V2} (HTI Systems), \textbf{Simba} (Ifak System GmbH), \textbf{Stoat} (WRc plc) and \textbf{West} (Hemmis) are not used solely for 'advanced' tasks specifically requiring the dynamic mathematical models, i.e. controller design, on-line and off-line decision support, model based control, etc. but recently also begin to gradually replace the traditional static design methods for \ac{WWTP} design.  
+
+Wastewater treatment plants are inherently very complex physical systems accommodating many interdependent and time-varying biological, chemical, and physical processes with large number of time-varying inputs and parameters. Additionally, the inputs (i.e. wastewater quantity and composition), model parameters (e.g. bacterial growth rates, biomass yields, settling velocities, etc.), and disturbances (e.g. run-off intensities, toxicity in the influent, etc.) are often highly uncertain. 
+Nevertheless plant design calculations are usually carried out with simple static equations obtained from time-dependent equations, often in the form of \acfp{ODE} and sometimes \acfp{PDE} through removal of time dimension and further subsequent simplifications. This process of simplification however necessitates that the effects of variability and uncertainty of all inputs, parameters, and disturbances are accounted for by introduction of single peaking and safety factors. %lumped into 
+This means that in static design methods final results are multiplied by multipliers greater than unity leading to addition of extra reactor volumes, increase of pipe diameters, pump sizes, etc. Temporal variability and uncertainty is therefore not directly modelled and thus, their effects on the plant's performance and its outputs, e.g. effluent quality, cannot be accurately predicted and accounted for in the final design. Choice of these safety and peaking factors is additionally often based on the engineers' experience and intuition and is seldom backed up with measurements, thus it rarely reflects local environmental conditions. A bespoke, accurate design of a \ac{WWTP} with traditional static design methods is therefore rather impossible. 
+
+Despite of all of the above described shortcomings, simple static design methods have been successfully applied for the design of new and refurbishment of the existing \acp{WWTP} over many years. Gradually though, these static methods have been replaced by simulation methods. This change of approach to \ac{WWTP} design is mainly driven by legislation which puts more stringent constraints on effluent quality, what in turn demands from the investors to use more technologically complex processes equipped with more accurate and robust control systems.
+As the modern treatment plants become more advanced and the discharge consent limits are being gradually lowered the required robustness and efficiency of final designs can only be ascertained by employing accurate dynamic models. Dynamic simulation allows process engineers to test the plant's behaviour under many different operational scenarios with bespoke, user-defined time-varying inputs, disturbances and parameters, which may additionally be based on on-site measurements.%  and assess the efficiency and robustness of the plant prior to construction.
+
+Apart from the above mentioned clear advantages of simulation methods over static design procedures, dynamic models also have several other useful practical applications. Once a dynamic model of a \ac{WWTP} is calibrated and used for design it can be later reused for further process optimisation, assistance in plant start-up and commissioning, training of plant operators, development and testing of automatic control strategies, synthesis and tuning of controllers, diagnosis, risk analysis, fault detection and decision support. A few out of hundreds of such application on large-scale objects are mentioned below.
+\citet{Ladiges2003} used a dynamic model of wastewater and sludge process trains to choose the most economical plant extension option after further 250,000 PE had been connected to a 1,860,000 PE municipal \ac{WWTP}. The simulation results suggested that only a sludge process train needed to be upgraded with additional storage volume and no changes to the wastewater processing units needed to be made, contrary to what initial non-simulation based feasibility studies had suggested. The proposed solution was then implemented and proved satisfactory after 3 years of operation \citep{Ladiges2004}. 
+The author of this thesis during his professional experience as a process engineer used a calibrated dynamic model of an activated sludge process to integrate process design and control strategy design within a single step and then test the robustness of this approach through analysis of the simulated effluent concentrations over an extended time period \citep{Janus2007}. The process design was also supplemented with \ac{CFD} analysis of \acp{FST}. Dynamic process simulation allowed to obtain a bespoke near-optimum design based on the available information of local conditions, operators' preferences and acceptable levels of risk. \ac{CFD} in turn allowed to optimise geometry of the existing assets and to maximise their reuse. Both design and simulation exercises led to reduced \ac{OPEX} and \ac{CAPEX} in comparison to the initial solution obtained from earlier feasibility studies.
+More recently, \citet{Cierkens2012} successfully used an \acs{ASM2d}-based model of Eindhoven \ac{WWTP} together with its catchment and river models in order to synthesise better control strategies for the integrated catchment system based on the available on-line sensor data and historical influent data (e.g. storm events). This model was intended to serve as an important future decision support tool for \ac{WWTP} and sewer system operators.  
+\citet{Rodriguez2002} applied a deterministic \ac{WWTP} model created in a commercial software package \mbox{GPS-X} as a tool for diagnosis, supervisory control and prediction within a multi-layer hybrid knowledge-based/deterministic \ac{DSS}. This \ac{DSS} was then installed at a full-scale \ac{WWTP} in Granollers, Spain. The work showed that mechanistic process models can successfully be integrated into \ac{SCADA} systems and used as on-line tools for prediction, high level (supervisory) control and decision support. 
+
+Although mathematical models of the, so called, `conventional' process units such as activated sludge and biofilm bioreactors, final settlement tanks, sludge thickeners, trickling and sand filters, anaerobic digestion units etc., are available off-the-shelf in all commercial simulation packages, mathematical models of \ac{MBR} units, whether immersed or sidestream, are not readily available or the ones that are on offer are very simplistic. Currently, predefined \ac{MBR} models are included in process unit libraries of most recent releases of the three popular process simulation packages: Biowin, \mbox{GPS-X} and West. 
+However, none of the above models is able to predict concentrations of the most dominant biofoulants, i.e. \ac{SMP} and \ac{EPS} inside the bioreactor and, what is required for integration of the biological and filtration models, link these concentrations to the rates of different membrane fouling mechanisms, such as pore constriction, pore blockage, cake filtration, etc. Additionally, these models do not provide a detailed mechanistic description of membrane fouling and fouling control mechanisms.
+Because of the above, simulation-based process design, process and energy optimisation, troubleshooting, etc. which can be easily performed with commercial simulation packages on conventional treatment processes such as activated sludge process or anaerobic digestion cannot be carried out to a similar degree for \ac{MBR} systems. 
+
+The gap between the availability of general-purpose mathematical models for the, so-called, `conventional' processes and \acp{MBR} is apparent and needs to be bridged to allow \ac{MBR} systems to be integrated into larger mixed-process \ac{WWTP} simulation studies. Development of a mechanistic \ac{MBR} model will allow to carry out similar simulation-based studies on \ac{MBR} systems to what is already possible on other wastewater treatment processes. Process unit manufacturers, system integrators and various engineering companies will have a tool which may allow them to improve their designs, derive better process control strategies and, at a later stage, use the mathematical models on-line for assistance with decision making or for training. 
+A mechanistic \ac{MBR} model may therefore help to improve the designs of existing \ac{MBR} systems, improve their energy-efficiency, robustness and controllability. As a result of these improvements \ac{MBR} systems may be given a more competitive edge over `conventional' treatment processes.
+
+The \ac{MBR} model developed in this thesis is based on the system of \acfp{ODE} and \acfp{AE} which allow it to be implemented and simulated in general purpose commercial simulation environments such as Simulink$^\textrm{\textregistered}$ or their free-software alternatives such as Scicos and OpenModelica. The main intention of the author was to create a model that first and foremost can be used by the scientific and engineering community to address various day-to-day problems facing process engineers and scientists working on \ac{MBR} systems. The model presents itself as a more complete mechanistic alternative to less extensive mathematical models of \ac{MBR} units that have been created up to date, such as \citet{Lee2002,Busch2007,Saroj2008,Mannina2011,Maere2011}. 
+
+At the same time the new model aims to answer some of many still unanswered questions about various mechanisms and processes occurring in \ac{MBR} reactors or where the findings are conflicting. These questions together with the proposed answers and suggestions supported by knowledge gained during the course of this research project will be described in the latter chapters of this thesis. It is still unknown what exactly causes fouling and what are the links between fouling and concentrations of various types of biopolymers. The mechanisms of fouling are still not completely understood and what is even less understood are the mechanisms of membrane clogging. As to activated sludge kinetics, it is still unknown how production of biopolymers happen under highly time-varying conditions and in a response to, e.g. toxicity or low \acf{DO}. Movement of air-bubbles in the vicinity of membrane surface during air-scouring and the links between bubble movement and shear rates on the membrane surface are also yet not 
+well understood. 
+A detailed description of all these processes is currently either impossible due to lack of available knowledge or is infeasible as the produced models would have been very complex, slow, and contain large numbers of unidentifiable or difficult to identify parameters. They would therefore require very elaborate experimental procedures for parameter identification and high computing power for simulation. 
+The main intention of the author is thus to strike a practical balance between complexity and accuracy of the \ac{MBR} model and its ease of use, i.e. to provide a detailed enough description of the processes to allow the user to perform process optimisation studies but, at the same time, to produce a model which will not require vast amounts of effort to set-up, calibrate, validate and execute.
+
+In addition to stricte scientific and practical value, developments described in this thesis are also of economic significance as the global \ac{MBR} market continues to grow with its total value forecasted by \citet{globalindustryanalysts2012} to reach \$888 million by 2017. \ac{MBR} market was valued by BCC market research analysts at an estimated \$337 million in 2010. It is rising at a \ac{CAGR} of 13.2\% and is expected to reach \$627 million by 2015, as shown in Figure~\ref{fig:introduction:mbr_market_forecast}.
+\acp{MBR} gradually become a preferred solution over the, so-called, `conventional' processes, e.g. traditional bioreactor/final settlement tank configurations due to increasingly stringent effluent discharge norms, rising water scarcity and enhanced emphasis on water reuse and recycling for freshwater conservation. Additionally, small footprint of these systems makes this technology suitable for refurbishment of old plants \citep{globalindustryanalysts2012}. 
+Availability of a comprehensive mathematical model of a \ac{MBR} may lead to higher sales of this technology, help to integrate it with existing \ac{WWTP} processes in plant refurbishment designs, optimise final designs, allow bespoke developments of control strategies, allow integrated catchment modelling studies to be carried out with \ac{MBR} models connected to sewer and river water quality models and train future plant operators. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.65\textwidth]{graphics/mbr_market_bcc_research.eps}
+\caption[Membrane bioreactor market, 1990-2015.] {Membrane bioreactor market, 1990-2015 (\$ millions), BCC Research 2012.}
+\label{fig:introduction:mbr_market_forecast}
+\end{figure} 
+
+A more detailed introduction to \ac{MBR} technology in wastewater treatment where \ac{MBR} systems are explained from the practical and research perspective is provided in Chapter~\ref{chapter1}. Meanwhile, Section~\ref{sec:chap0:aims_objectives} of this chapter lists and explains the aims and objectives of this thesis, while Section~\ref{sec:chap0:model_overview} provides a general overview of the developed \ac{MBR} model and lists the addressed topics.
+
+As some of the work reported in this thesis was carried out as part of a collaborative \acf{DTI} project No. TP/3/DSM/6/I/15123 entitled \emph{`Improving the design and efficiency of membrane bioreactor (MBR) plant by using modelling, simulation and laboratory methods'}, it has to be noted that some of the elements of research described here were influenced by collaboration with other researchers and research students participating in this project. The main contributions claimed in this thesis are however solely the work of the author. Portions of the work that were due to other individuals participating in the project and had to be included in this thesis for the sake of completeness, are clearly marked throughout this document including the names of the contributors.
+
+\section{Aims and Objectives}
+\label{sec:chap0:aims_objectives}
+This thesis intends to:
+\nopagebreak
+\begin{enumerate}
+ \item Systematise knowledge on modelling \acfp{MBR} for wastewater treatment.
+ \item Analyse and compare existing theories and models of biopolymer production in activated sludge systems.
+ \item Develop two new activated sludge models with \ac{SMP} and \ac{EPS} kinetics, based respectively on \acs{IAWQ} \acf{ASM1} and \acf{ASM3}.
+ \item Investigate different fouling mechanisms and mathematical fouling models for \ac{MF} and \ac{UF} membranes.
+ \item Develop two new fouling models in which the fouling mechanisms are made dependent on activated sludge properties such as \ac{MLSS}, \ac{SMP} and \ac{EPS} and thus can be linked to the outputs of the activated sludge models. Moreover, the fouling models shall be able to simulate full-scale \ac{MBR} implementations which require descriptions of cake buildup control mechanisms such as backwashing, relaxation, air scouring and provision of cross-flow. The first model is intended for use in long-term simulation studies and in practical applications where the effort spent on model set-up, calibration and execution shall be reduced to minimum. The second model shall provide a detailed mechanistic description of membrane fouling mechanisms and serve as a tool for increasing our understanding and for interpretation of membrane fouling behaviour.
+ \item Provide bi-lateral links between the developed activated sludge and fouling models, i.e. allow the modelled fouling processes depend on the conditions present inside the bioreactor and, vice-versa, the mixed liquor composition be influenced by time-varying rejection properties of the membrane.
+ \item Create a dynamic mathematical model of an immersed \ac{MBR} by combining one of the newly developed activated sludge models with one of the developed fouling models and investigate the properties and behaviour of this \ac{MBR} model through numerous simulations under different influents and operating conditions.
+\end{enumerate}
+
+The developed \ac{MBR} model is intended to serve the following purposes:
+\nopagebreak
+\begin{enumerate}
+ \item Capture the knowledge on modelling \ac{MBR} systems in a single mathematical model ready to be used in purpose-built \ac{WWTP} simulation software and in general purpose simulators.  
+ \item Advance the knowledge on modelling biopolymer kinetics in activated sludge systems through development and validation of two new biopolymer activated sludge models.
+ \item Advance the knowledge on modelling fouling of semi-permeable membranes through development of two comprehensive fouling models.
+\end{enumerate}
+
+The \ac{MBR} model is developed for process engineers as a tool for process design, process optimisation, energy optimisation, controller design, training of operators and on-line and off-line decision support at \ac{MBR}-based \acp{WWTP}. It can also assist researchers with practical experiments carried out on lab-scale \ac{MBR} systems and \ac{MBR} pilot plants. 
+
+\section{Problem statement, outline and analysis}
+\label{sec:chap0:problem_statement}
+
+Whilst the previous sections of this chapter provide a brief introduction to this thesis and, in particular Section~\ref{sec:chap0:aims_objectives} familiarises the reader with the main aims and objectives, the main purpose of the text so far has been to raise the reader's understanding of mathematical modelling of \ac{MBR} systems solely from a practical perspective, i.e. describe the subjects covered in this work as would have been done by a practitioner. The purpose of this section is somewhat different as it states and outlines the problem from a strictly scientific, not a practitioner's point of view. 
+\ac{MBR} reactors, as was described in the previous sections of this chapter, are very complex systems hosting a myriad of processes of different natures from biological, chemical to physical. Additionally, these processes occur over a large range of spatial and temporal scales. For instance, whereas time constant of the oxygen uptake process in the bioreactor is in the range of seconds to minutes, the process of hydrolysis may happen over the period of minutes to hours, biomass decay processes take, depending on environmental conditions, between hours and days. 
+Motion of a liquid phase in a 3 phase liquid-solid-gas multiphase flow problem inside a bioreactor and an immersed membrane tank (if separate from the bioreactor) can itself be characterised with a large range of spatial and temporal scales. Whereas large whirls have characteristic length scales comparable to the length scales of the domain (e.g. metres in full-scale applications) and characteristic frequencies of less than a Hz the smallest eddies are of the size of Kolmogorov microscales, i.e. micrometres and have characteristic frequencies of kHz \citep{Versteeg2007}. 
+Membrane fouling, whose mathematical description forms the backbone of all membrane filtration models in \ac{MBR} systems, shall in fact be considered as a combined effect of a number of processes which all attribute to the loss of membrane permeability at different temporal and spatial scales. Fouling processes leading to the so-called irreversible fouling occur on molecular and microparticle scales and are rather slow with time constants of hours to days. Cake buildup on membrane surface on the other hand is rather a quick process which tends to occur within minutes and is caused by deposition of relatively large particles of the size of fractions of millimetres to millimetres depending on local conditions such as mean \ac{CFV} or mean air-bubble rise velocity and frequency.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.4\textwidth,angle=90]{graphics/membranes_full.eps}
+\caption[Graphical representation of a generic \ac{MBR} modelling problem.] {Graphical representation of a generic \ac{MBR} modelling problem.}
+\label{fig:generalised_model_mbr}
+\end{figure} 
+
+A graphical representation of a generic \ac{MBR} modelling task not limited to a specific process configuration is shown in Figure~\ref{fig:generalised_model_mbr}. Figure~\ref{fig:generalised_model_mbr} visualises the key components of a \ac{MBR} model and interconnections between these components in order to show the model's functional structure and complexity. As it usually happens with mathematical modelling of any complex system, the model developer is faced not just with the tasks strictly related to model formulation, implementation and validation but first and foremost with model selection, i.e. needs to determine at an early stage of the process which phenomena are dominant and shall be be included in the model and which ones are less significant and thus can be omitted. The modeller often needs to draw a line between model accuracy and complexity versus simplicity and ease of use. 
+As can be seen in Figure~\ref{fig:generalised_model_mbr}, the number of processes, factors, parameters, properties etc. describing a \ac{MBR} system is already large and this list could easily be extended even further. 
+By taking a pragmatic approach only the most dominant processes, properties and variables of a \ac{MBR} model are shown in Figure~\ref{fig:generalised_model_mbr}. Otherwise the resulting graph would have been cluttered and very difficult to read. Although the choice of blocks used to produce Figure~\ref{fig:generalised_model_mbr} is very subjective and definitely not exhaustive, the figure can hopefully allow to demonstrate complexity of any \ac{MBR} modelling task and the challenges facing the modeller who embarks upon development of a complete mechanistic mathematical model of a \ac{MBR}.
+
+Figure~\ref{fig:generalised_model_mbr} displays causal and non-causal relationships between the blocks representing respectively: \textcolor{darkgray}{the main system} (dark grey), \textcolor{gray}{subsystems} (light grey), \textcolor{salmon}{subsystem components} (salmon), \textcolor{violetred}{operating conditions} (lilac), \textcolor{cadetblue}{invariant properties} (light blue), \textcolor{cyan}{inputs and disturbances} (cyan), \textcolor{forestgreen}{controlled variables} (light green), \textcolor{tan}{dependent variables} (ivory), \textcolor{olivegreen}{effects} (khaki) and \textcolor{brown}{final outputs} (light brown).
+Non-causal relationships are represented with dark grey straight lines whereas causal relationships are shown with arrow lines in which the arrows point from the cause to the effect. Arrows of blue colour represent positive causal relationships, i.e. increase in the magnitude of the cause leads to increase in the quantity of the product, red arrows represent a negative causal relationship, whereas dark green arrows represent causal relations which are either unknown, or the findings so far are conflicting, or the relationship is non-linear exhibiting local maximum (maxima) or minimum (minima). 
+The blocks and the connecting lines that are drawn with solid lines represent parts which are chosen for the \ac{MBR} model described later in this thesis, while the objects and relationships which are not included in the \ac{MBR} model are drawn with dotted lines.
+
+Components shown in Figure~\ref{fig:generalised_model_mbr} describe just the fundamental macroscopic quantities a a \ac{MBR} system, such as: effluent composition, sludge production, oxygen demand, process aeration air-flow rates, membrane fouling rates, \ac{TMP}, air scouring and/or \acp{CFV} and membrane permeation rates. 
+Other quantities such as condition of the components, e.g. membrane ageing, air-diffuser fouling, etc. as well as \acf{CAPEX} and \acf{OPEX} are not included in the description of a \ac{MBR} model shown here. \ac{CAPEX} and \ac{OPEX} can however be calculated at a later stage from the model outputs, such as daily sludge production, process aeration rates, permeate pumping rates, \ac{TMP}, air-scouring rates, \acp{CFV}, chemical cleaning and backwash regimes, etc. provided that required plant design information is also provided, i.e. process volumes, equipment, instrumentation, etc. 
+
+Figure~\ref{fig:generalised_model_mbr} shows that a \ac{MBR} model requires a rather large number of building blocks which are often interlinked with one another forming complex mathematical relationships. These mathematical relationships as well as the mathematical models themselves are frequently unknown or their parameters are difficult to identify. The task of encapsulating all the available knowledge and all the important properties and characteristics of a \ac{MBR} and its processes within a single mathematical model is thus very difficult. The reasons for this state of affairs are summarised below.
+
+\begin{enumerate}
+\item The number of subsystems, i.e. equations, state variables and parameters to be included in the \ac{MBR} model is vast leading to a mathematically complicated and computationally demanding model. 
+\item The number of connections between subsystems is very high, i.e. many biological and physico-chemical processes described in the model depend on a large number of other processes. This leads to a situation where one parameter drives not only one but many processes and where one output depends on a combined effect of several simultaneously occurring processes. 
+\item Due to the above, identification of model parameters and states is very difficult, if not impossible. Large number of processes being modelled (and thus mathematical equations) necessitates introduction of many state variables, some of which cannot even be measured and identified.
+\item Many of the processes cannot be represented in the model either because of the lack of available information required to properly describe these processes in mathematical terms, lack of available experimental data for the identification of parameters or motivated by the need of keeping the model within practical levels of complexity.
+\end{enumerate}
+
+For all of the above reasons, building a \ac{MBR} model from all the blocks shown in Figure~\ref{fig:generalised_model_mbr} would be rather impossible and if we imagined that all processes and links could be mathematically described in mechanistic terms, the resulting model would have become impractical due to its number of equations and parameters leading to long execution times during simulation. The author thus adopted a pragmatic approach where one has to compromise between completeness of the mathematical description and complexity of the model structure. The blocks and links shown in Figure~\ref{fig:generalised_model_mbr} with dotted lines were eliminated and the model structure was consequently reduced to one presented in Figure~\ref{fig:simplified_model_mbr}. This model structure was adopted during development of a \ac{MBR} model presented in this thesis.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.4\textwidth,angle=90]{graphics/membranes_reduced.eps}
+\caption[Graphical representation of a simplified \ac{MBR} modelling problem.] {Graphical representation of a simplified \ac{MBR} modelling problem.}
+\label{fig:simplified_model_mbr}
+\end{figure} 
+
+\section{Model overview}
+\label{sec:chap0:model_overview}
+
+\subsection{Topics addressed in the \ac{MBR} model}
+\label{subsec:chap0:addressed_topics}
+
+\ac{MBR} model developed in this thesis addresses the following:
+
+\begin{enumerate}
+ \item The biological part of the model describes all activated sludge state and composite variables characteristic of the \ac{IAWQ} family \acs{ASM} models. The model predicts concentrations of various wastewater constituents in the bioreactor and in the effluent on top of the fundamental process variables such as oxygen demand and excess sludge production. Additionally, the model is able to predict bulk liquid \ac{SMP} and \ac{EPS} concentrations which shall be used as inputs to the fouling model equations.
+ \item The fouling part of the model describes various fouling mechanisms such as pore constriction, pore blockage and cake formation in case of the three-mechanism classical fouling model or, in case of a simpler behavioural model, irreversible and reversible fouling, which collectively attribute to loss of membrane permeability over time.
+ \item The modelled fouling prevention and control mechanisms include cake detachment due to \ac{CFV} and air scouring and cake removal by back-flushing and relaxation. Back-flushing is assumed to cause an instantaneous and complete removal of cake deposits from the membrane surface. The time-dependent back-flow of water and detachment of solid particles due to velocity field are not explicitly modelled, therefore the model is not able to predict the effects of back-flush flow rates and back-flush duration times on the efficiency of cake removal nor pressure losses during back-washing.
+ \item The bulk liquid \ac{SMP} and \ac{EPS} concentrations are linked to the relevant fouling equations as later described in Chapter~\ref{chapter6} and Chapter~\ref{chapter7}\label{enum:smp_eps_links}.
+ \item \ac{SMP} retention on the membrane is related to the size distribution of \ac{SMP} particles which in turn depends on the bioreactor's \ac{SRT}.
+\end{enumerate}
+
+Bi-lateral links between the bioreactor and the membrane connecting fouling rates to biopolymer concentrations, cake deposition to coarse bubble aeration, and biopolymer concentrations in the bioreactor to retentive properties of the membrane, are formulated as follows:
+
+\begin{enumerate}
+ \item \ac{SMP} is considered to be the main foulant causing pore constriction / irreversible fouling. \ac{SMP} is assumed to deposit inside membrane pores causing reduction of pore diameters and thus, increase in membrane resistance. 
+ \item \ac{EPS} is assumed to promote cake formation / reversible membrane fouling by filling the voids between activated sludge flocs and thus lowering the cake's porosity, hence increasing its \acf{SCR}.
+ \item \ac{SMP} concentrations in the bulk liquid depend mostly on \ac{SMP} rejection properties of the membrane which are found to influence the bulk liquid \ac{SMP} concentrations more than the biological processes inside the bioreactor themselves. \ac{EPS} is assumed to adhere to activated sludge flocs and is therefore fully retained in the bioreactor.
+ \item Cake deposition control by air scouring is modelled with a simplified \ac{1D} multiphase air-liquid flow model of \citet{Zaisha1993} under an assumption that the air-liquid flow regime inside the membrane module resembles slug flow. Deposited cake particles are assumed to detach from the membrane surface once the shear stresses caused by upward motion of air bubbles and liquid slugs exceed the inter-particle forces keeping the particles on the membrane surface. These forces are represented for simplicity with a single static friction coefficient \citep{Nagaoka1998}.
+\end{enumerate}
+
+\subsection{Topics not addressed in the \ac{MBR} model}
+\label{subsec:chap0:not_addressed_topics}
+
+The following topics are not be addressed in the \ac{MBR} model due to, either, lack of sufficient amount of knowledge required for the development of the required models, difficulties with identification of model parameters, or the need to keep the complexity and the size of the complete \ac{MBR} model at feasible levels.
+
+\begin{enumerate}
+ \item Membrane rejection properties are not explicitly modelled. Rejection of solid particles and \ac{EPS} is assumed to be 100\% whereas rejection of \ac{SMP} maintains a constant value between 0\% and 100\% for a given \ac{SRT}. \ac{SMP} rejection is assumed to depend on \ac{SRT} accordingly to the model of \citet{Song2007}. Although the membrane rejection properties are also likely to change with filtration time as the membrane gets progressively fouled, there is no data currently available to derive any form of mathematical model of this process. It is assumed that rejection of \ac{SMP} on the membrane is caused by sieving. The effects caused by formation of a dynamic layer on the membrane surface, which is believed to act as a prefilter for the incoming liquids creating an effect as if the membrane had smaller pore diameters, are also not included in the model.
+ \item The biological model considers influent wastewater to be composed of fractions of \ac{COD}, \ac{N} and \ac{P}. Information about molecular nature and chemical composition of the influent is not captured anywhere inside the biological model. Hence, any changes that chemical composition of the substrates might have on substrate utilisation rates cannot be predicted. The model thus demands recalibration once the nature and composition of the influent changes. As a result of this simplification, toxicity effects due to presence of specific components detrimental to the biocenosis cannot be explicitly modelled and would require introduction of new state variables and possibly new equations into the biological model.
+ \item Membrane properties such as membrane type, hydrophobicity, pore structure and pore size distribution are not explicitly included in the fouling model equations. The effects that all these properties have on membrane characteristics are all lumped into individual fouling equation parameters which need to be adjusted in the model on the case by case basis.
+ \item Activated sludge properties such as floc size distribution, fraction of colloidal matter, floc shape, zeta potential or filament amount are not modelled nor used as inputs to the \ac{MBR} model. Similarly to membrane properties, these parameters are implicitly included in the fouling model through adjustment of specific fouling rate constants in order to match model outputs to experimental data.
+ \item The \ac{MBR} model cannot predict the recovery of irreversible fouling by in-line or off-line chemical cleaning. It is expected that the simulation horizons will not exceed the time in which it is necessary to perform a chemical clean on a membrane. Although the model for in-line chemical cleaning could have been helpful during testing of long-term fouling control strategies, the mechanisms of chemical cleaning are not yet fully understood and hence very hard to describe in mathematical terms.
+ \item Although membrane module clogging has equally detrimental effects on the membrane as membrane fouling, clogging mechanisms are not yet fully understood and thus are not included in the \ac{MBR} model. Clogging models are of significant importance in description of immersed membrane configurations, especially in \ac{HF} systems where hair and other solid materials which manage to pass through primary treatment stage deposit within fibre bundles. However, as description of clogging would necessitate development of a complex \ac{CFD} hydrodynamic model and complex characterisation of the bulk liquid, this task is left for future investigations.
+ \item The model cannot describe fouling due to biofilm growth on the membrane surface. Biological processes taking place near the membrane inside the forming biofilms are therefore also not included in the model.
+ \item Scaling is not modelled here as it is found to occur in \acp{MBR} only under specific conditions and for influents with high levels of hardness. Scaling is more dominant in \ac{UF}, \ac{NF} and \ac{RO} membranes where concentration polarisation is more prominent due to higher retention of salt molecules on the membrane, causing local salt concentrations to exceed their maximum solubility and precipitate on the membrane surface.
+ \item The model also cannot predict how the membrane properties deteriorate due to ageing. The \ac{MBR} model is however only intended for shorter term simulations where membrane deterioration effects are insignificant and have no effect on predicted \acp{TMP}.
+ \item The biological model, although capable of predicting bulk liquid \ac{SMP} and \ac{EPS} concentrations, is unable to differentiate between different groups of these biopolymeric substances with regards to their chemical composition or \acf{MWD}. Whilst various researchers found that different chemical compounds making up \ac{SMP} have different fouling strengths, e.g. polysaccharides were found to be four times stronger foulants than proteins \citep{Yigit2008}, the biochemical pathways of different components forming \ac{SMP} and \ac{EPS} in activated sludge systems are still unknown.
+ \item The model is unable to predict removal of trace organics such as emerging contaminants which \ac{MBR} systems are found to exhibit an improved capability of, over conventional \acp{ASP}.
+ \item Impacts of shear caused by mixing, \ac{CFV} and air sparging on break-up and agglomeration of flocs are not described. The model is thus unable to predict activated sludge \ac{FSD} or increased release of \ac{SMP} and \ac{EPS} from flocs observed in practice under elevated shear rates.
+ \item The fouling model provides no description of the so-called \emph{conditional fouling} where, due to various interactions between the membrane and mixed liquor, various soluble components present in the wastewater get adsorbed on the membrane surface leading to irreversible fouling, even at zero fluxes. % reference Radjenovic.
+ Effects of conditional fouling are partially accounted for by assigning appropriate initial conditions for membrane resistance at the beginning of each simulation.
+ \item The so-called \acs{TMP} jump which has been found to occur in long-term constant flux membrane filtration at permeation fluxes even below critical flux \citep{Ye2006} cannot be predicted in the simpler one of the two developed fouling models whilst the more complex fouling model is able to predict such behaviour but has not been thoroughly validated.
+ \item Last but not least the \ac{MBR} model cannot describe the effects on any additives such as flocculants, coagulants or adsorbent reagents such as \ac{PAC} on membrane fouling.
+\end{enumerate}
+
+\subsection{\ac{MBR} model structure}
+\label{subsec:chap0:model_block_diagram}
+
+Figure~\ref{fig:introduction:model_structure_introduction} describes the \ac{MBR} model block diagram which represents a high level model structure whilst indicating its main subsystems and signals. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.8\textwidth]{graphics/model_structure_introduction.eps}
+\caption[Generalised structure of the \ac{MBR} model.] {Generalised structure of the \ac{MBR} model.}
+\label{fig:introduction:model_structure_introduction}
+\end{figure} 
+
+The model in Figure~\ref{fig:introduction:model_structure_introduction} is subdivided into three subsystems: Bioreactor (Subsystem~1), Membrane (Subsystem~2) and Interface (Subsystem~3). Subsystem~1 receives an input vector $u_1(t)$ associated with the influent flow and composition plus an output vector $y_4(t)$ associated with the retentate outflow from the membrane and produces an output vector $y_1(t)$. Some of the flow is diverted from the retentate recirculation loop $y_4(t)$ forming an output vector $y_5(t)$ associated with \acf{SAS} wastage stream.
+The subvector $\tilde{y}_1(t) \subset y_1(t)$ is composed of the selected state variables of Subsystem~1 which are found to cause membrane fouling: $\tilde{y}_1(t) = \left( S_{SMP}\; X_{EPS}\; X_{MLSS} \right) ^ T$, where $S_{SMP}$ denotes the concentration of \acf{SMP} (g m$^{-3}$), $X_{EPS}$ denotes the concentration of \acf{EPS} (g m$^{-3}$) and $X_{MLSS}$ is the concentration of \acf{MLSS} (g m$^{-3}$). $T$ denotes a matrix transpose operator and is not to be confused with bulk liquid temperature which has been assigned the same symbol. 
+Subsystem~3 receives a signal $\tilde{y}_1(t)$ and and input vector $u_2(t)$. For an immersed `backwashable' membrane configuration $u_2 = \left( q_{air} \; t_{filt} \; t_{back} \right)^T$, where $q_{air}$ denotes coarse bubble aeration rate (m$^3$ h$^{-1}$), $t_{filt}$ denotes filtration time (s), and $t_{back}$ is the backwash time (s). Subsystem~3 converts the signals $\tilde{y}_1(t)$ and $u_2(t)$ into fouling rates and parameters which form an output signal $y_2(t)$. Outputs from the bioreactor $y_1(t)$ and the interface $y_2(t)$ become inputs to Subsystem~2 which produces two output vectors: $y_3(t)$ associated with the permeate stream and $y_4(t)$ associated with the retentate stream. 
+Subsystem~1 and Subsystem~2 receive two external disturbance vectors, $w_1(t)$ and $w_2(t)$, which in this case consist of just two signals - liquid temperature, $T$ and air temperature, $T_{air}$. 
+The membrane is affected by the processes occurring upstream in the bioreactor through two forward loops: the direct forward loop $y_1(t)$ and the indirect forward loop through Subsystem~3. The membrane, in turn, has an effect on the behaviour of the upstream-placed bioreactor through a feedback loop $y_3(t)$ representing the retentate stream.
+
+All biological \acfp{ASM} as well as the complete benchmark model of a \ac{MBR} are implemented in a wastewater modelling package Simba$^{\textrm\textregistered}$ from iFak GmbH, Germany running under MATLAB$^{\textrm\textregistered}$ 2006a. The membrane fouling models are implemented in MATLAB$^{\textrm\textregistered}$ 2011 and Simulink$^{\textrm\textregistered}$.
+
+\section{Organisation of this thesis}
+\label{sec:chap0:organisation_of_thesis}
+
+The thesis is structured into three parts as illustrated in Figure~\ref{fig:introduction:thesis_structure}. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.6\textwidth]{graphics/thesis_structure_introduction.eps}
+\caption[Schematic representation of the structure of the overall thesis.] {Schematic representation of the structure of the overall thesis.}
+\label{fig:introduction:thesis_structure}
+\end{figure} 
+
+Part~I is preceded with Chapter~\ref{chapter0} and Chapter~\ref{chapter1} which are intended to provide an introduction to \ac{MBR} technology and to help put the developments brought about in this thesis into practical context. In addition to providing a brief and concise overview of membrane technology in wastewater treatment applications, Chapter~\ref{chapter1} also outlines the most challenging issues currently facing further development of \ac{MBR} systems and describes current research priorities within the field. 
+The aims and tasks set out within this research programme are broken down into smaller portions of work which are then outlined followed by a brief description of the research problems they attempt to address.
+
+Part~I comprises Chapters~\ref{chapter2} and \ref{chapter3} and is primarily devoted to analysis of the existing activated sludge models extended with \ac{SMP} and \ac{EPS} kinetics and development of new extended activated sludge models. The documented work builds on the findings of Leuderkind and Piret who identified \ac{SMP} production kinetics in bacterial cultures and the work of \citet{Laspidou2002a,Laspidou2002b} who linked \ac{SMP} and \ac{EPS} kinetics in bacterial cultures within a single theory of biopolymer production and degradation. 
+The \ac{SMP} and \ac{EPS} production and degradation kinetic equations of \citet{Laspidou2002a,Laspidou2002b} are then adapted and incorporated within the \acf{ASM} framework leading to formulation of two new activated sludge models. The first model in based on the \acf{ASM1} and the second is formed on the basis of the \acf{ASM3}.
+
+Chapter~\ref{chapter2} reviews the existing \ac{SMP} and \ac{EPS} \ac{ASM} models by analysing their strengths and weaknesses. Attention is placed on two areas: (a) the added \ac{SMP} and \ac{EPS} kinetic equations and (b) the links between the added \ac{SMP} and \ac{EPS} kinetic equations and the original kinetic equations of the underlying \ac{ASM} models. The first area is investigated by analysing the structure and the parameters of the biopolymer kinetic equations and examining their behaviour in simulation studies under selected operating conditions. The links between \ac{SMP} and \ac{EPS} kinetic equations and the original process equations of the underlying \ac{ASM} models exist in the model through addition of new stoichiometric parameters and modification of the original stoichiometric parameters in order to ascertain closure of mass and charge balance equations. The newly added stoichiometric parameters associated with \ac{SMP} and \ac{EPS} kinetics appear in the stoichiometric relationships of 
+the original \ac{ASM} state variables, thus creating links between the new kinetic equations and the original \ac{ASM} model kinetics. 
+These effects are analysed by investigating the model structure, carrying out sensitivity analysis studies for newly introduced kinetic parameters and comparing the new and the original \ac{ASM} model outputs in simulation studies under different operating conditions. The outputs being compared were: unit sludge production, unit oxygen demand, and effluent \ac{COD}, \ac{TN}, \ac{NH4-N}, \ac{NO3-N}, \ac{SMP} and \ac{EPS} concentrations.
+
+Following unsatisfactory results of the analysis of the published \ac{ASM}-based biopolymer models described in Chapter~\ref{chapter2}, Chapter~\ref{chapter3} is focussed on the development of two new, combined \ac{SMP} and \ac{EPS} activated sludge models. The new models are intended to eliminate the deficiencies of the current biopolymer \acsp{ASM}, i.e. ensure the closure of \ac{C}, \ac{N}, charge and, where applicable, \ac{TSS} mass balances, improve the accuracy of \ac{SMP} and \ac{EPS} predictions, and eliminate the negative effects that the added biopolymer kinetic and stoichiometric parameters have on the prediction accuracies of the original \ac{ASM} state variables and calculated composite variables. The \ac{SMP} kinetics of Leuderkind and Piret and the integrated \ac{SMP} and \ac{EPS} metabolic model of \citet{Laspidou2002a,Laspidou2002b} are incorporated into two \ac{IAWQ} models: \ac{ASM1} and \ac{ASM3}.
+The kinetic and stoichiometric parameters identified in two different calibration studies are combined with literature values to create a set of default parameters for both models. The most sensitive kinetic and stoichiometric parameters are identified via local sensitivity analysis at different operating points. Complexity of both models is assessed through analysis of the number of parameters, equations and state variables followed by a parameter sensitivity study. The new \ac{SMP} and \ac{EPS} \ac{ASM3}-based model is used for formulation of the \ac{MBR} benchmark model as described in Chapter~\ref{chapter7}.
+
+Part~II comprises Chapters~\ref{chapter5} and \ref{chapter6} and is primarily concerned with the second aspect of modelling \ac{MBR} reactors, namely mathematical description of membrane fouling. The work described here is carried out in three steps. The first step is to review and analyse various theories of fouling found in literature and assess their applicability to describe fouling in \acp{MBR} for wastewater treatment. In the second step, theoretical principles of attachment and detachment of macromolecules and particles to/from membrane leading to irreversible and reversible fouling are analysed on a microscopic, particle scale. \ac{SMP} transport across the membrane is also analysed through simulation of a \ac{1D} advection-diffusion equation. 
+In the third step, two fouling models are formulated. The first model builds on the work of \citet{Liang2006} and expands this model with new equations describing flux dependent \ac{SMP} deposition and cake detachment mechanisms and back-flushing. 
+The second model is formulated on the idea of \citet{DuclosOrsello2006} who expressed flux decline in a constant-\ac{TMP} dead-end filtration process with an analytically derived integral equation obtained through integration and combination of three classical fouling equations: pore constriction, pore blockage, and cake formation. The model proposed here follows the same idea but presents the model in a differential form, where all three equations are solved simultaneously whilst cake formation occurs in sequence after pore blockage. The model is not restricted to constant-\ac{TMP} filtration and can be used to simulate filtration where both \ac{TMP} and flux are varied with time. 
+
+Chapter~\ref{chapter5} looks at various processes occurring during filtration of solutions and suspensions through \ac{UF} and \ac{MF} rejection membranes. Different theories and mathematical models of membrane fouling and reversible and irreversible fouling control are analysed and their applicability for modelling membrane filtration of wastewater mixtures are assessed. This Chapter is therefore intended to be used as a road map and a reference guide for modelling fouling in \ac{MBR} systems. The main attention is focused on selection of the most dominant fouling mechanisms and rejection of the processes which have a minimal effect on membrane fouling in \ac{MBR} systems.
+Dead-end as well as cross-flow filtration regimes are addressed and various processes associated with these two different modes of operation are described in mathematical terms on a macroscopic as well as microscopic scale. At the end of this chapter, several published fouling models are reviewed and assessed based on a number of criteria such as complexity, accuracy, identifiability of parameters, extensibility and applicability to modelling \ac{MBR} systems. Whilst the list of publications describing fouling models is very long, the Author decided to choose only those models for further analysis which seemed to be most applicable for the purpose of this thesis, i.e. for integration with biological models and formulation of an integrated \ac{MBR} model. The study presented in this chapter served as a basis for development of two new fouling models described in the subsequent Chapter~\ref{chapter6}.
+
+The second chapter of Part~II, namely Chapter~\ref{chapter6} describes a formulation of two new fouling models and follow two different modelling approaches. Whilst the first model describes just the `observable' behaviour of the membrane, i.e. \ac{TMP} and total membrane resistance as a function of time and permeate flux, the second model takes a more detailed, `first principle' approach by describing the underlying fouling mechanisms with theoretically derived equations. The first, `behavioural' model is based on the concept of \citet{Liang2006} who subdivided fouling into two parts: long-term irreversible fouling and short-term reversible fouling. The model proposed in Chapter~\ref{chapter6} adopts the same concept but extends the model of \citet{Liang2006} through introduction of flux dependent \ac{SMP} deposition, different cake control mechanisms, and a addition of a back-flushing mechanism. 
+Whilst the fouling equations adopted in the first fouling model differ from the widely accepted theoretical fouling equations, the model has been proved to predict the behaviour of rejection membranes in filtration of wastewater mixtures at a technical scale with very good levels of accuracy. 
+We shouldn't however forget that this model is a significant simplification of fouling processes occurring in practice and is created for the purpose of quick deployment and easy and quick parameter identification, and is only valid within a limited operational range, i.e. range of permeate fluxes and simulation time horizons. The model is unable to predict certain phenomena found in filtration through semipermeable membranes such as e.g. two-stage \ac{TMP} profiles \citep{Ye2006}. The second proposed fouling model is able to represent these phenomena by adopting a more detailed mechanistic approach. Classical filtration laws are combined and solved within a single three mechanism fouling model. The model assumes that all three fouling processes: pore constriction, pore blockage and cake formation take place on the membrane during filtration of polydisperse suspensions, however cake formation occurs in sequence after pore blockage. The model follows the idea originally proposed by \citet{DuclosOrsello2006}.
+The published model of \citet{DuclosOrsello2006} is modified as follows: an additional state variable which represents resistance under blocked area is introduced; pore constriction parameter is flux-dependent; particle back-transport mechanisms are added. The model is found to exhibit very good agreement with the measurements as explained in detail in Chapter~\ref{chapter6}.
+
+Part~III comprises Chapters~\ref{chapter7} and \ref{chapter8} and builds on the developments presented in Part~I and Part~II. Chapter~\ref{chapter7} describes formulation of an integrated \ac{MBR} model where the \ac{ASM3}-based \ac{SMP} and \ac{EPS} biological model developed in Chapter~\ref{chapter3} is combined with the behavioural fouling model developed in Chapter~\ref{chapter6}. The \ac{MBR} model layout is built upon the plant layout used in the paper of \citet{Maere2011} who created a simple \ac{MBR} benchmark model in a similar fashion to what had earlier been done for a conventional \ac{ASP}/\ac{FST} process \citep{Cost_624,Copp2002}. However, whilst the model of \citet{Maere2011} does not consider membrane fouling or production of biopolymers in the bioreactor, the integrated \ac{MBR} model described in Chapter~\ref{chapter7} describes both of these aspects and additionally considers bi-lateral links that occur between the biological and the fouling parts of the model. Chapter~\ref{chapter8} 
+describes the results of simulations performed on the newly developed integrated \ac{MBR} model with inputs and operating parameters defined in \citet{Cost_624,Copp2002} and \citet{Maere2011}. The outputs considered include effluent concentrations of selected state variables as well as composite variables such as \ac{COD} and \ac{TN} and various quality indices and energy consumption indicators. The outputs from this integrated \ac{MBR} model are then compared with the outputs of the \ac{MBR} benchmark model of \citet{Maere2011}.
+
+The biological model adopted in the \ac{MBR} system described in Chapter~\ref{chapter7} is based on \ac{ASM3} which has different kinetics and state variables from the \acf{ASM1} originally used in \citet{Maere2011}. This difference in state variables used by both models necessitated that the model inputs and equations for quality and energy performance indicators had to be reformulated in order to suit the new biological model. Care was taken to ascertain that the new biological model and the original model of \citet{Maere2011} receive the same influent loads and composition and therefore, the outputs from these two models can be quantitatively compared. The \ac{CES-ASM3} is combined with the behavioural fouling model described in Chapter~\ref{chapter6} using the plant layout adopted from \citet{Maere2011}. The biological and the fouling model are interfaced and linked together using the following relationships: (a) Irreversible fouling depends on \ac{SMP} concentrations which are predicted in the 
+biological model, whilst the rate of \ac{SMP} deposition depends on flux; (b) The \acf{SCR} used in the reversible fouling equation depends on \ac{EPS} content in activated sludge which, again, is predicted in the biological model; (c) \ac{SMP} retention on the membrane affects \ac{SMP} concentration in the bioreactor, which in turn has an effect on the rates of other activated sludge process kinetics. \ac{SMP} retention is dependent on the total \ac{SRT} of the system; (d) Cake detachment from the membrane is linked to coarse-bubble aeration rates. This functional link is obtained from \ac{1D} quasi steady-state slug-flow simulations in a staggered grid representing a \ac{HF} outside-in membrane module.
+
+Chapter~\ref{chapter8} describes the simulation results obtained from the integrated \ac{MBR} model simulated with the inputs and simulation scenarios defined in \citet{Cost_624,Copp2002} and later adopted in \citet{Maere2011}. The outputs obtained from the new \ac{MBR} model are then compared from the results of the \ac{MBR} benchmark simulations in \citet{Maere2011}. The quantities being compared include state variables, composite variables and different environmental quality and energy consumption indicators described in Chapter~\ref{chapter7}. The simulation results show that the \acs{CES-ASM1} model predicts lower sludge yields and lower denitrification rates to \ac{ASM1}. This behaviour is caused by the alteration of the organic substrate pathways as a result of the introduction of the \ac{SMP} and \ac{EPS} kinetics. The results also indicate that the variations of the \ac{SMP} and \ac{EPS} content in \ac{MLSS} in response to diurnal variations in the influent flow and loading rates are too small to 
+have a significant impact on membrane fouling whilst the fouling rates are highly dependent on the fluctuations of solids concentration in the membrane tank and the flux rates. Such an observed model behaviour is a direct consequence of the modelling approach which does not take into account the biopolymer production in response to environmental stress, only due to `normal' variations in substrate concentration and flow rates. Whether the model is correct in predicting that the variations in biopolymer concentrations in the plant receiving diurnal flow and load patterns or whether the mechanisms of biopolymer production are not sufficient to give realistic outputs, can only be ascertained through extensive validation under dynamic conditions.
+
+Finally, Chapter~\ref{chapter9} provides the overall conclusions of the original Author's work presented in Chapters~\ref{chapter2}-\ref{chapter8} and outlines the areas for further research.
+
+\section{Contributions}
+\label{sec:general_introduction:contributions}
+During duration of this research project a number of contributions have been made to the field of modelling and simulation of \ac{MBR} systems. Three major contributions have been identified - one for Part~I and two for Part~II of this thesis. A number of less significant contributions have also been identified and listed below.
+\subsection*{Part I}
+\label{subsec:general_introduction:part_1}
+\subsubsection*{Major contribution}
+\begin{itemize}
+ \item The major contribution of Part I is the development of two new activated sludge models which extend the `standard' \acs{IAWQ} \acs{ASM} models with \ac{SMP} and \ac{EPS} kinetics. The new models are considered to represent a higher level of complexity and sophistication than this of the previous activated sludge models found in literature. The new models are able to reproduce bulk liquid \ac{SMP} and \ac{EPS} concentrations in activated sludge systems without compromising the prediction accuracy of other parameters characteristic of activated sludge. See Chapter~\ref{chapter3}.
+\end{itemize}
+\subsubsection*{Subsidiary contribution}
+\begin{itemize}
+ \item An extensive and systematic review of the existing activated sludge models with biopolymer production kinetics has been carried out. The models have been qualitatively and quantitatively evaluated and then compared, followed by assessment of their practical applicability for use in simulations of \ac{MBR} systems. See Chapter~\ref{chapter2}.
+\end{itemize}
+\subsection*{Part II}
+\label{subsec:general_introduction:part_2}
+\subsubsection*{Major contributions}
+\begin{itemize}
+ \item The first major contribution of Part II has been the development of a behavioural fouling model based on the concept of \citet{Liang2006} who subdivided fouling into two parts: the long-term irreversible fouling and the short-term reversible fouling. The new model proposed in this thesis adopts the same concept and extends the old model by introducing flux dependent \ac{SMP} deposition, various cake detachment mechanisms and a back-flushing mechanism. The new model is able to predict \ac{TMP} over a broad range of permeate fluxes and hydrodynamic conditions what constitutes a significant improvement to the old model which was only valid over a rather narrow operating region. See Chapter~\ref{chapter6}.
+ \item The second major contribution of Part II has been the generalisation and linking the classical filtration laws within a single three mechanism fouling model. Similarly to the earlier publications of \citet{DuclosOrsello2006} it is assumed that the three fouling processes: pore constriction, pore blockage and cake formation, occur simultaneously. The proposed model expands the existing models by introducing the following changes: additional state variable which represents resistance under the blocked area is introduced; pore constriction parameter is flux-dependent; and particle back-transport mechanisms are added. See Chapter~\ref{chapter6}.
+\end{itemize}
+\subsubsection*{Subsidiary contributions}
+\begin{itemize}
+ \item A brief, structured description of various fouling mechanisms and theories, supplemented with mathematical equations, is provided in Chapter~\ref{chapter5} to allow the reader see a complete picture of membrane filtration and fouling in \acp{MBR}. Hence, the reader is provided with a review of different fouling mechanisms and fouling models accompanied with a critical review of their strengths and weaknesses.
+ \item Particle back-transport is analysed on a particle level by breaking down the forces acting on a single particle and a subsequent investigation of the particle deposition criteria. See Chapter~\ref{chapter5}.
+\end{itemize}
+
+\subsection*{Part III}
+\label{subsec:general_introduction:part_3}
+\subsubsection*{Subsidiary contributions}
+\begin{itemize}
+ \item The \acs{ASM3}-based activated sludge model described in Chapter~\ref{chapter3} has been integrated with the behavioural fouling model illustrated in Chapter~\ref{chapter6} to form a comprehensive description of a hollow-fibre immersed \ac{MBR} reactor. The resulting model of a \ac{MBR} contains bidirectional links between the biological and the filtration part of the system. It is assumed that the \ac{SMP} concentration in the bioreactor directly affects pore constriction/irreversible fouling whereas the increase in \ac{EPS} concentration has an influence on cake formation/reversible fouling by increasing the specific cake resistance. The retentive properties of the filtration membrane affect the bulk liquid \ac{SMP} concentrations through retaining the \ac{SMP} particles inside the bioreactor. 
+ The back-transport of particles from the membrane surface to the bulk liquid, i.e. cake detachment, is linked to coarse-bubble aeration rate using a mathematical expression derived from the \ac{1D} slug-flow hydraulic model. See Chapter~\ref{chapter7}.
+ \item The bioreactor and the membrane models are connected and arranged in such a manner as to represent the \ac{BSM-MBR} plant layout \citep{Maere2011}. As a result, a de-facto new benchmark model is created. This model offers a higher level of sophistication than \ac{BSM-MBR} by describing the interactions between both parts of the system and thus producing more realistic results. See Chapter~\ref{chapter7}. 
+ \item An extensive simulation study using the new \ac{MBR} benchmark model has been conducted to evaluate the model's performance and compare results against the benchmark model of \citet{Maere2011}. The \ac{MBR} model has been simulated with various steady-state and dynamic inputs to evaluate its behaviour over a range of operating points. See Chapter~\ref{chapter8}.
+\end{itemize}

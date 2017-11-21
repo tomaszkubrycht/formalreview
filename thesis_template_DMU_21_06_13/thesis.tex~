@@ -1,0 +1,263 @@
+% A configurable template for PhD Thesis created and modified by Matthew D.H. Lay
+% Created:      10 Sep 2003
+% Last Modified:22 May 2006
+% Comments:     Unfortunately I think the margins change depending on the PDF converter or PDF reader used.
+% These values were optimised for Miktex 2.1, epstopdf and AdobeReader6 for Windows XP SP2 and may vary for your system.
+
+% Template has been modified to fit the specific needs of the author:
+% Tomasz Janus
+% De Montfort University, Leicester, United Kingdom
+
+%+++++++++++++++++++++++DEFINE CLASS & PACKAGES++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\documentclass[a4paper,oneside,11pt]{book}
+
+% Entire thesis formatting, style, etc. are written in style.tex
+\input{style.tex}
+\DeclareMathSizes{10}{9}{8}{5}
+
+% =========================BEGIN DOCUMENT==============================================================================
+\begin{document}
+\pagenumbering{roman}   %Roman numeral numbering for initial section of thesis
+
+%==========================DEFINE TITLE PAGE===========================================================================
+\input{title_page.tex} 
+
+%==========================DEDICATION============================================================================
+\input{dedication.tex} 
+
+%==========================ABSTRACT PAGE===============================================================================
+\input{abstract.tex}
+
+%==========================SIGNED DECLARATION==========================================================================
+\input{declaration.tex}
+
+%%==========================PREFACE=====================================================================================
+\input{publications.tex}
+
+%==========================ACKNOWLEDGEMENTS============================================================================
+\input{acknowledgements.tex}
+
+%==========================CONTENTS====================================================================================
+\singlespace    % Switch to single spacing for table of contents etc
+\dominitoc
+\tableofcontents
+\listoftables   % The list of tables/figures may seem pedantic
+\listoffigures
+%===========================MAIN BODY==================================================================================
+\newpage
+\pagenumbering{arabic}
+
+% General introductionx
+\input{introduction}
+% Chapter 1
+%\input{Chapter_1/chapter1}
+
+% Bibliography
+%\bibliographystyle{ormsv080}
+\bibliographystyle{plainnat}
+%\bibliographystyle{te}
+%\bibliographystyle{elsarticle-harv}
+%\bibliographystyle{elsarticle-num-names}
+\bibliography{bibliography/phd_bibliography}
+
+\chapter*{Acronyms}
+
+\begin{singlespace}
+\begin{acronym}
+\acro{1D}{one-dimensional}
+\acro{2D}{two-dimensional}
+\acro{3D}{three-dimensional}
+\acro{alpha}[$\alpha$]{oxygen transfer coefficient}
+\acro{ABR}{anaerobic baffled reactor}
+\acro{AE}{algebraic equation}
+\acro{AI}{artificial intelligence}
+\acro{AMW}{apparent molecular weight}
+\acro{ANN}{artificial neural network}
+\acro{AOTE}{actual oxygen transfer efficiencies}
+\acro{AOTR}{actual oxygen transfer rate}
+\acro{ARD}{average relative deviation}
+\acro{AS}{activated sludge}
+\acro{ASDM}{activated sludge and digestion model}
+\acro{ASM}{activated sludge model}
+\acro{ASM1}{Activated Sludge Model No. 1}
+\acro{ASM2}{Activated Sludge Model No. 2}
+\acro{ASM2d}{Activated Sludge Model No. 2d}
+\acro{ASM3}{Activated Sludge Model No. 3}
+\acro{ASP}{activated sludge process}
+\acro{BAF}{biological aerated filter}
+\acro{BAP}{biomass associated products}
+\acro{BioP}[Bio-P]{biological phosphorus removal}
+\acro{BMU}{best matching unit}
+\acro{BNR}{biological nutrient removal}
+\acro{BOD}{biological oxygen demand}
+\acro{BOD5}[BOD$_5$]{biological oxygen demand in five days}
+\acro{BODult}[BOD$_\infty$]{ultimate biological oxygen demand}
+\acro{BSA}{bovine serum albumen}
+\acro{BSM1}{COST/IWA benchmark simulation model no.1}
+\acro{BSM1-LT}[BSM1\textunderscore LT]{long term benchmark simulation model no.1}
+\acro{BSM-MBR}{\ac{MBR} benchmark simulation model}
+\acro{C}{carbon}
+\acro{CA}{cellulose acetate}
+\acro{CAGR}{compound annual growth rate}
+\acro{CAS}{conventional activated sludge}
+\acro{CASP}{conventional activated sludge process}
+\acro{CAPEX}{capital expenditures}
+\acro{CDF}{cumulative density function}
+\acro{CES-ASM1}{combined \ac{EPS} and \ac{SMP} production ASM1-based model}
+\acro{CES-ASM3}{combined \ac{EPS} and \ac{SMP} production ASM3-based model}
+\acro{CF}{crossflow}
+\acro{CFD}{Computational Fluid Dynamics}
+\acro{CFV}{crossflow velocity}
+\acro{CiP}{cleaning in place}
+\acro{COD}{chemical oxygen demand}
+\acro{CP}{concentration polarisation} 
+\acro{CST}{capillary suction time}
+\acro{CSTR}{completely stirred tank reactor}
+\acro{CV}{controlled variable}
+\acro{DAE}{differential algebraic equation}
+\acro{DAF}{dissolved air flotation}
+\acro{DO}{dissolved oxygen}
+\acro{DOM}{dissolved organic matter}
+\acro{DPAO}{denitrifying phosphorus accumulating organisms}
+\acro{DSS}{decision support system}
+\acro{DWF}{dry weather flow}
+\acro{DTI}{Department of Trade and Industry}
+\acro{EAP}{environment associated products}
+\acro{EBPR}{excess biological phosphorus removal}
+\acro{ECP}{extracellular polymers}
+\acro{EPS}{extracellular polymeric substances}
+\acro{EQ}{effluent quality}
+\acro{EQI}{effluent quality index}
+\acro{FD}{finite difference}
+\acro{FE}{finite element}
+\acro{FM}[F:M]{food to mass ratio}
+\acro{FV}{finite volume}
+\acro{FS}{flat sheet}
+\acro{FSD}{floc size distribution}
+\acro{FST}{final settlement tank}
+\acro{GA}{genetic algorithm}
+\acro{HF}{hollow fibre}
+\acro{HFiMBR}{hollow fibre immersed membrane bioreactor}
+\acro{HMI}{human machine interface}
+\acro{HRT}{hydraulic retention time}
+\acro{iMBR}{immersed membrane bioreactor}
+\acro{IAE}{integral of the absolute error}
+\acro{IAWQ}{International Association on Water Quality}
+\acro{IBMF-MBR}{integrated bioreactor and membrane fouling \acs{MBR} model}
+\acro{IBVP}{initial boundary value problem}
+\acro{iMBR}{immersed membrane bioreactor}
+\acro{IQ}{influent quality}
+\acro{IQI}{influent quality index}
+\acro{ISE}{integral of the squared error}
+\acro{ISS}{inert suspended solids}
+\acro{IUPAC}{International Union of Pure and Applied Chemistry}
+\acro{IWA}{International Water Association}
+\acro{MAPE}{mean absolute percentage error}
+\acro{MBR}{membrane bioreactor}
+\acro{MF}{microfiltration}
+\acro{MIMO}{multiple input multiple output}
+\acro{MLSS}{mixed liquor suspended solids}
+\acro{MLVSS}{mixed liquor volatile suspended solids}
+\acro{MP}{microbial products}
+\acro{MPC}{model predictive control}
+\acro{MT}{multi-tube} % or multi tubular
+\acro{MV}{manipulated variable}
+\acro{MW}{molecular weight}
+\acro{MWCO}{molecular weight cut-off}
+\acro{MWD}{molecular weight distribution}
+\acro{N}{nitrogen}
+\acro{NF}{nanofiltration}
+\acro{NH4-N}[NH$_4^+$-N]{ammoniacal nitrogen}
+\acro{NO3-N}[NO$_3^-$-N]{nitrate nitrogen}
+\acro{NSS}{non-settleable solids}
+\acro{OCI}{operational cost index}
+\acro{ODE}{ordinary differential equation}
+\acro{OLR}{organic loading rate}
+\acro{OPEX}{operational expenditures}
+\acro{OTE}{oxygen transfer efficiency}
+\acro{OTR}{oxygen transfer rate}
+\acro{OUR}{oxygen uptake rate}
+\acro{P}{phosphorus}
+\acro{PAC}{powdered activated carbon}
+\acro{PAO}{phosphorus accumulating organisms}
+\acro{PCA}{principal component analysis}
+\acro{PDE}{partial differential equation}
+\acro{PDF}{probability density function}
+\acro{PE}{population equivalent}
+\acro{PES}{polyethersulfone}
+\acro{PF}{plate and frame}
+\acro{PHA}{polyhydroxyalkanoates}
+\acro{PI}{proportional integral}
+\acro{PID}{proportional integral derivative}
+\acro{PLC}{programmable logic controller}
+\acro{PnID}[P\&ID]{piping and instrumentation diagram}
+\acro{PP}{proteins}
+\acro{PS}{polysaccharides}
+\acro{PSD}{pore size distribution}
+\acro{PVDF}{polyvinylidene fluoride}
+\acro{RAS}{recirculated activated sludge}
+\acro{RMSPE}{root mean square percentage error}
+\acro{RO}{reverse osmosis}
+\acro{RTD}{residence time distribution}
+\acro{SAD}{specific aeration demand}
+\acro{SADm}[SAD$_\textrm{m}$]{specific aeration demand per membrane area}
+\acro{SAS}{surplus activated sludge}
+\acro{SBOD}{soluble biological oxygen demand}
+\acro{SBOD5}[SBOD$_5$]{soluble biological oxygen demand in five days}
+\acro{SBODult}[SBOD$_\infty$]{soluble ultimate biological oxygen demand}
+\acro{SBR}{sequencing batch reactor}
+\acro{SCADA}{supervisory control and data acquisition}
+\acro{SCOD}{soluble chemical oxygen demand}
+\acro{SCR}{specific cake resistance}
+\acro{SEM}{scanning electron microscopy}
+\acro{SI}{scum index}
+\acro{SISO}{single input single output}
+\acro{SMP}{soluble microbial products}
+\acro{SND}{simultaneous nitrification and denitrification}
+\acro{SOC}{soluble organic carbon}
+\acro{SOM}{soluble organic matter}
+\acro{SOM2}[SOM]{self organising map}
+\acro{SON}{soluble organic nitrogen}
+\acro{SOTE}{specific oxygen transfer efficiency}
+\acro{SOTR}{specific oxygen transfer rate}
+\acro{SPES}{sulfonated polyethersulfone}
+\acro{SRF}{specific resistance to filtration}
+\acro{SRP}{soluble residual products}
+\acro{SRT}{sludge retention time}
+\acro{SS}{suspended solids}
+\acro{STKN}{soluble total Kjeldahl nitrogen}
+\acro{STN}{soluble total nitrogen}
+\acro{SVI}{sludge volume index}
+\acro{SSVI}{stirred sludge volume index}
+\acro{T}{tubular}
+\acro{TB}{Taylor bubble}
+\acro{TEP}{transparent exopolymer particles}
+\acro{ThCOD}{theoretical chemical oxygen demand}
+\acro{TSN}{total soluble nitrogen}
+\acro{TKN}{total Kjeldahl nitrogen}
+\acro{TMP}{trans-membrane pressure}
+\acro{TN}{total nitrogen}
+\acro{TP}{total phosphorus}
+\acro{TSB}{Technology Strategy Board}
+\acro{TSS}{total suspended solids}
+\acro{UAP}{utilisation associated products}
+\acro{UF}{ultrafiltration}
+\acro{UFV}{upflow velocity}
+\acro{UV}{ultra violet}
+\acro{VSS}{volatile suspended solids}
+\acro{WAS}{waste activated sludge}
+\acro{VFA}{volatile fatty acids}
+\acro{WW}{wastewater}
+\acro{WWTP}{wastewater treatment plant}
+\acro{XBOD}{particulate biological oxygen demand}
+\acro{XBOD5}[XBOD$_5$]{particulate biological oxygen demand in five days}
+\acro{XBODult}[XBOD$_\infty$]{particulate ultimate biological oxygen demand}
+\acro{XCOD}{particulate chemical oxygen demand}
+\acro{XTKN}{particulate total Kjeldahl nitrogen}
+\acro{ZSV}{zone settling velocity}
+\end{acronym}
+\end{singlespace} 
+
+\end{document}
+
+%======================================================================================================================
